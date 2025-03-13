@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 function Movie({
   coverImage,
   title,
@@ -12,7 +14,11 @@ function Movie({
   return (
     <div>
       <img src={coverImage} alt={title} />
-      <h2>{title}</h2>
+      <h2>
+        <Link to="/movie">
+          {title}
+        </Link>
+      </h2>
       <p>{summary}</p>
       <ul>
         {genres.map((g) => (
