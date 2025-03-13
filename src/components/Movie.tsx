@@ -1,11 +1,13 @@
 import { Link } from "react-router-dom"
 
 function Movie({
+  id,
   coverImage,
   title,
   summary,
   genres,
 }: {
+  id: number;
   coverImage: string;
   title: string;
   summary: string;
@@ -15,7 +17,7 @@ function Movie({
     <div>
       <img src={coverImage} alt={title} />
       <h2>
-        <Link to="/movie">
+        <Link to={`/movie/${id}`}>
           {title}
         </Link>
       </h2>
